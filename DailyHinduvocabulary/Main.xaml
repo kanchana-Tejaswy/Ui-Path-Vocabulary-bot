@@ -1,0 +1,195 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities"
+ xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CDF56701DA2_v2_sub_generateChatCompletion_Create.Bundle;assembly=CDF56701DA2_v2_sub_g.nk3iBocfJB1TIxkxofFyk3"
+ xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C243CEDD7D1_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CDF56701DA2_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>CDF56701DA2_v2_sub_g.nk3iBocfJB1TIxkxofFyk3</AssemblyReference>
+      <AssemblyReference>C243CEDD7D1_v2_sub_g.Jh8ef32kB8N1h7fA92niFsj</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="topGeneratedText">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ConnectorActivity_1</x:String>
+            <x:String x:Key="SourcePropertyName">out_text</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" Default="[new UiPath.IntegrationService.Activities.SWEntities.CDF56701DA2_v2_sub_generateChatCompletion_Create.Bundle.v2_sub_generateChatCompletion_Create]" Name="contentGeneration" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAAA+0923LbOLK/gvLL2luyIju3mVRNbcmyHSu2ZY0uyTmzk0rBJCRhRBEcgrQtT+Vz9uF8x/7Y6QZACiApUXGue45rL5HZFwDdjUY3gCb/2jnlLPBlR4QJ5SGLd179tTNkNPZm9DpgGrjz6p/vGzvdMEqT/MFfOz26YDuvdgZ0OmB/pkwmO42dYy6jgC4rQUx6MY8SLkINIgZGADhaRkggk5iHU/h7KOLkKvaxO4dIOqFpkLylQYpYfxHy+84kRurQW36IWEiDZPn7zity0EDQgt59SMSchRKfPW+11NNwhRDFTAIpK5NGsVhECf79+867GfdmRMRTGvJ7iv0mMwGDJ8mMkYBRH7pKIiG5AvFQPZ+gfIiYkIG4Fgn3SD8WHpOStNNELDSX3UG/vfeP33dUizyEQaceAnSz/y1SQmNGKLCciFjT0IBA1244SMTQJWwRsZgmacyQrtV8rh+L6EOkxvNRy5xPQ1RpV55x32fwG1pjHxta7RfCo0YhlyBgHtEYVdWVlyyZCb9PY1BkglrQVLnSF8Jngfpd1PklQkhoQI7ORyAfBIBMSfcYhYQSU6zwkc+iQCwXLExIIkgqQZjwFFHAFhPigWYCplhttJfnjZ2TMF3YJjqNkv1nYv+wdfhs/+AA/gWKzJjKMGuYBrjgIdcYrZf7Bz+VqYsINgumgc3W/iSgcrbfah3YDKrAFrkX0NRn+0/3n+9LEYYssWhpmMxiEXGvWcJSnWm9OGzt3xy8am1kuH9z+Kr1CVwPWoeHmubje9vCLgT1j5ZmquZmhnOcx8zXD8pm92vK4uVWJqenZsne+vnjkq2BCcVEk60zJRLn/mmDSb2oH8eR8Je2mLnsd7snIfpQv9znbhesPWGesWa36+9mIAnoOUwCjUQQfwLjUCPg6IbNsJqEGIFLRJ/QQLLmaizXQoCfCt3BvCz6U0Vla7JvfJqSLl/QGEdWPWJUnAK01VhAezB9S6rjgBOATmtEMlFIWvquSLoTIplyC0r6hIZLIxvmo3Se9M+65JYHAbkGh0LlHB5fM9A5A7pQOWqkBeldXFw2CbDTg3aY5Ax46AVg+H7m03NZd0MCTn1GPCqZbChYJQN6Q3mA48w4iDQBpQGHnkgYPAEb5M6QFNafKQ14sswcoyaC4SxVpxYRxYbq1PtTrXotfemFXP82TIczcQscB2nANHTAJoqi2rC7sgN9UBPDNNSV70Q8nwTi9uQOF1qpVGiAGTPVN+SPg3//8T0ai9MNWK3Yw7qh5+en9UI9x26AR9tg/Y9CWye0OncY0HCa0inrCL8cMuDUyRAqHXkGzGaG8enaE9LQz6YKTCbp0VA5e2Da3OzVfy4HCu1JzOeUgoqt9XBiD6S9mNGYezZ84cBjeu2CYwcsJfyQzEaQDsI9i68p/wNiThvn3sY5SoMpdELN/AzjeupgsHAKvsSGhw5cyLBA7/SiQxMaOHCPOvB75s1sqEP9jgXSgTqmcAxDc8C+w/o1g5DXbhkMxgbHjM0tKAts6Ek4DVzmzBn3MCo2zpyen8hEFAQDEZctOCohXrDBqQ3us1i65BNncKc8LLQ/4Q4clk9HsBPHerqxSzx1JQca99zWp450Xqd/QHSV2GYxdbp/xq5jdmuBZ47szzgspTbU6XsnFsDbaX7m9P4sDUtmO0vdyQPRfwHBsZ0umKUL5456uqEvQlZQAfdtlDcUbMCdgX8UDBBSPpfD3EE4p/d0bqthPnfAswV4Fwu6cInDkILFW3DHQs8hZnHbFg44jX2wAbILP2Ca/MH3bFRHmOfLeLq8t8GOKC+osGCB08oFT2YpLWgiSFzy5KYAv7Hhl+A/plQuLYTF1EXwmF+cbIt5kccS/rewMRyLvhThVBQsYhG6PMDiZ7bVLuJSGzbU8QdHIGXXVhaOEHssct1s6EyY4zRxZnPodL4n4luGlkZ2j8R88e9/BbYyQ0cjVz63bUY4Y+in4R+w6ljwyDHYvig4xcjpRx/SzsQ2hki61HGSTmHJZ9DPmN5zp5uQ/x4N1qHr37RI0B/ZBAOxKJpa7Ix9kMrCjI4dQx8G4obaa4KcF8FFryIdAQyhB44WpdN+O7gudlD+6dDDkl2AO/oZ3oLUbKh0ocx31SNvCtQz7nbv1oaP6IIHFjRxdD9iAWjDBjsWOppRm3Myc4BpPHd7ljjjGi+ns9R2dakzw8fzmPKC4FJHNePYt7uWutzvr52VPnVioLecJWExlLpxF6QZR0e/P4TUKeATrmLeDPV+tj/DOK8CfxRTn+tNtxJBUr/pgVElRthjyeKrGxbHGJTbuwaPWcRj6vUNU6+I85Mw4ckSgno2FTFn8p9/f1+VhKldFE9jLSsTMRGZzegiNu7fejl/TMQooC3v1R4u7pxMSCgS3PFoEBoENm62aRKzG85unQ2OqqztoFVO2zDsFrabMQ8KkbkISYKMi3iqNRt3BkEkgTaunUBOPe7pp/bSbB0QWNjOY3s18X1Ur4WZPbHzkAV1fLr+23aOgwsLjH/ZUXCflFvp9ivaOQY1PBnxhS0TfKYeWXi/QjSIJmSh5Y/ssR21SQy5OO63lcQHwIGGlWU4fNc9HRFPbw5kBOqh2jBwsgxYLROwn9j25vppBx6WeXfDhMVhdopyRMM5dq/teSINE9IrdtNBN9gGucy7HU8ZSCGkpJc10PWZkgvZPe5198r824MMNcOsYJui5VPCM16F4bZHGS0OuYoyoXeGesK1Z6hQyGhE77oO0vquKCI0K+YTICO7b9ujvSqe6pfCA7Q1/DCJIxBUzQk1aigzGqPs1ws+YxOS61Tiui0reRjYpn50xCLC/eSypsYGtInajzms8X+TBHJvFjrRSHt8rIDyQoM2sVmA/XpgPRvkcalR6kVCIiplBB6zikvfwDbRo/FMeFDhAttjUOopgMrkRyyY8nRB8plWIj46ySx/a2ry9nADAwBWsNjSUo9OaixV5zokYJDAEDMPTa92O73+GzupORpcINrJmvlsWHX6pxX9GMDjtSQrt3JMcK6T3cFrt+HcmxwPXrtbeLjPUDPLOu2Ns8zwKNp4FZ86UzesZowGyQzigPgGMKsYnSmMoUZYy2e9iXfa603cEOtVH4Sq2yKuDzSOALLXs25vz+VsCDWdS1bRjhQeh1Z4KNOYhtXDHSqcboZS0ecZzkRnJajgc2EvCJVMYI0aQNqCaKs1SptUf9CpmCCdXoa/mffJmPjs2qzJZTYn42OErqetNa6TWj8KbF73hxA/iNiHgSZMOuQA61gglzD3OHXL5cnYXbjXr5nAdb19nmxwwUCo7YEMmZfGqKHMGIfD3h4G2XgMfUMDpcVjh62mzAgrmaM7XGPsI9fWT8ZbxAan2qrrNXg6qNOgYWXcw4YZczowk2/9jDG8Qst1KtMEr93dc1itfGcF/XoVng7Wq9AQr1Njtzc8OXE7Uac3w3FtREd2gebf/xMLMuwXxre9DrdcNE8HNYumPr0hx5lJGIWXg6vjkzqT0KyWBWdVwWize8rYrFfn8cl6dWbUa2eOw2cLeWcMiwKv4LYSdZnNmYAc5hz/r+DLz867xxVZx9k4W7vqOqhPafSIec2Iz7bxEhnD2hGfjTeNuBv6XC3dID70fm4CB4tY23Fg3V6OajDLzMYh/xO6VNDrbpv6M0rjCil2e5qkbsj5MVRRO+ejfhXb480m3I1ZgKfcedzST6/B1xITJMHY+8MqticZgcZfG1N9Cn9yc7htE2543pUxZU5Aa/O5qHbFhgiD1A0Z+8XGIBbPDJdlj+S2P6rzRprLKZeYpXXcjYruSD8v7lWoo8aazr/pb+y8ZlHvTt/06wagOV2ulqLIaG7PYXNpVqBMrxtZdEQMbhOCqmoeObjMJA9FB2zKMe+sdjDduu0EhxuYavUa8aafY1TPMM3GLNp5aLEKvtzg6E2/Nmq/SO/Y4lqk8bS4M1SKvHp4hxfv9yqJS7uhi40hpyF8aLMi3A8f3DT8KLd+CYFZ0eWVdHE52uzsNJNt1ttLtX91XGbRY7fkN0aVT9s8+3q/bZx9NqP6Odj7rW4O2vy6ofpnwG5YmFZy0xgGYTOzSx7iLFJXB01SW8Eww7qaaJzNPM1seMeCCV5Hr+CnMQxCmVkfjy2jCDfgcKnFAziibpnv91NwDMoHl9n2zwyuQjWYVVrODpdJhyf8noVr7K0/MvBqc8u5bGNx/W12TIciBfHjTTKP1nL8rb0dO3UtZFuveT7IEG28CtYR5bC49Lp24jfEv0tIm9JSh7oum9HsthH2yXAbYd9yKdf1rn321t7POKvr24jyW1gGqkOU0bvqEMUQ5arpsNh0GAKn9qDzZAT/t+cwynAt1AqOWVJSlszo3fqEZdw8b27hq8bndb5KMcpFYZxKHhH2zqoizvF5RrDOwbhcyyttr9u72qvkuGGxVUxNMA82E9ElsBqwCYvZirfDVCNnuFUch81tbX5ca/OK2xY6GdbrBBiJmKgBr7eP8XB8vslCgAkmQDfcT7Xj0xJbEyh0C1tD4+GKOKNdvxVqxp5OyQlWM3lM1fe0p1i5RXaPT9oVZoToFrZGXjOQzev7eFixvr9366LUOjNkAfPyCxyPtzoeb3X84Lc6PBFOdEYzmgFjLEysutJBVnhEehBEVF7rwBK0RbooIavqKKx6wjoWgfcv8GaHKlOZLAmVqugFY0V1fcNX9Smr2xv5Rpt9e+MAhqaKGgHBFykIbqdYsNJqvnz+WK/ykOkFS5AI/ccJ9iUmmFWXW5pYw6VM2IJE60sPpY2hLkeJMGF3WLOSs82qWR5UknhQLoteFQ7PWBBN0gBmqITwH28tPri87wrypvCGylJNXyKi85JgRiIi85JA2tlJxTVLbhlkagfKaTxrNQlBYc34VNU7zrLzHvXTeuqrsMiUxkE0gHXP4JRQoE2nABJYrsTGQeLTkgN6ajkgwHh6WPI/wKT15fyPXSn9ubNoXTHx9oXAD5mDa0bwkAlYWYm9pob6q7q3R618nla2CE9wdr6OIfD2TUWv4yk6xh9ObQzHa2hat94vd6Mw13noxYzKVdks+hTqQRJGvUINrfIzXJIJU+9LwBuo4laq+nCpWcEvVVMdxZwleFqV3yoLxJR7ivc8FLewDE2xqtdUE68qg7GaN1CVwA3DFwsR4zwJhT+uYm/G1G4MrAdHqTdnCbkFFwf+TXgpZjqSzOgNAzcJPjKNAshCwMsBsv4Njl3dyvIhIvOSYKnKHPGmasIXqti97ubss9KS0QPyHes+rfMc1ZlvxtzBQoL3JnnoszsHhNfBYKBSpJCvFbKrL15JjgIo2dKpeeguOp7HIpAoAuUTPjAdxKiVhrp0tGmsAgeQ3UIGMfpoEtMN1tcA60g0BV5qBircQAcBMUUAVjlJWNxUTZO84Rm2TJ63SISVrKBCsQCdo4YDvuAJ2X3aujzaa5JhGmHiDs/12z/kK9I/Pm2QN8OrXoN0hm8b5PiqM2yQ0X+NLI0bydj6/oJRdMV8/my36RrOQ3zg5l49yBUWDL2hp0JV5/I3QvxwYruK8uqVH1N0D7C272U+38FCvqfKP2W4X2lr59HVPLqaR1fz6GoKrubz3lc2EQHEROdsWQoenaj8VKGRPk1mpYDSQdT8VECINa74fiH1aiboN0aPnpPdQKio+G2KzV/gqYOYpxHGalfXf0CE73QdbzRrhPyUVw1GdfXVzpMiFhJrhaZBsPxVbdlypvUDOq0rYd3swr+XPyoYyA/kkNxp82X90bcQ23dY/rYW2Rfzbd/QfL6thXw3lX/CMB8YLT66mkdX8+hqHl3NJ7qaYrS4/WtGExH1K8+1ovpzrZbaJz4wx1pgnc6pVsO8OFhK8zgGbLHAXWb3FKvV/Mna2Ks8Rn+5zTH6T4+nWD/KecnjKdaPqJX6OwDg0dQtUNcddE1+6roDBLqvts7zwarThJqE8Ke1CaHiysoJYajFmGWEBu0feer7y1/5z4/lPDH8IplhncXaefhnW+zfH2Rya7pQa3IPDBe+wYh/tED0gaG+6s1XEuVVmPEaRz7et14bVVSL+NGuH+16mxVj9emJ0qJxSe/UJUsNJromtfI2pkE0wSWuJZoEFxJz+Sl7sfjq2pgJOhWqZo6USxhEtuREQYrfrsDCm/xl8jBM8O1PrNtnHg3xUJvdeUwfZ5MbVbhrPj/hmzfpq3NzkEWTdJO/SYiApX79Mr7SHIGaCJ7g69BV0IuvPQ+tLz5kw9R9lQJP5gFf3YCQApbSWEAns/f2mzFYw6u96fWze9PrxbOdNVcTyhHZp9yDW32Ho5w2uLCSprWQsmuAMYM2b/Amy4R6uMkM/5UU312I28srVubrGE1ypm/IKS6SLBgNpSVfdT8hoXP8G6/ycjmHPGMULyG/+FnJVT03zSpTiMAvAyd1XTEzCNlQSU2L7MJ8EWAeQQBGQOMp6C/v3l52F0WqvW7Q+C0Lgn2fTXior7CottgdDAzYyVu8HqHsVRt0sLoPoYsPuH6HHH4PoLGyVl+HInrEDW1oxj56qRcwsO8h9ohlGHhPQ13RwLf2azm5qdbB5jzrsLVNntX6GnZV+r5NybpOMwxiYbgRqZueYmyvlAn/Nonu6A3L7Ecx4feQrbLbzONcU7wOI9S05THoz6T6eecyP6ROOyR+gSLGjyqom1nZqYgyR/V6kDkL+EwIdcEmZhEYnkLAV6IDNISu4MvPE74o5MM1M/3woHKmfwMlaZu5mgyUGy37/F7uwuMVhvtli9BXBWDSvv66wjceNGYw8UPn3YjVkjislcTTL3m59fscOv8HBGNfISz5v3nv4lGXdSFl8WNlJSfTNwjfYBm4zT5NNGNLQiPw4HHlCmDu5m5eARIazAm9FrhGq7Yi7hV3Quv83dPv5vlLauhYMfRMcI9tivFXjt4rk9lxfhb/mqKQZrFgwgohs5C8YWQes8KakqURWG+iosMpROt44VWHeDNlRAqgVx9ULc0a84RMGqjgJPuyVggJQrZA0VusPFHdoOpWc4ipQJIZQEUv18Zh1Yp+Vqvog6+jaPVBva95IDBh6qnWDUoROov14eBdPlFGzz9VRj/S7vOnbd5+133mL7FR/h9yJvD/Tyt1y7EEh1ByB0N4CA5P5UTlVH8cqdq0HEGasg+c/e2++Wwc8s3cvkqx0th8BRAdg/b7WRqgF9u8AMHcQtO5lN0T13+EaRDUlIgcvvgaLvRuP+URTWb7XO7LBKi8/YQFbMGSeLkf4UnsPvX01ocxBle6bQMkGbRQ6GFB9XqZMa8YbLHvZ4z6ypHWnwzbw4hhYecLVhxHOQMcaEQyyhBJP0d0P4i7HvGzxwBmfaUKoRSlnor59tVd+ZuaZLSyRWNtlVHMSANq7jVmnwBezV290bTag9d/d1LV3LovbOoRbLIz/eHHUdWILvU3IdeMJItJcFNCBdOJLH1q08xZ9SpJkeDrLvRnEIhPE6qKe1TZFnAI8MtGeh/MfIpSPZrpG5p1RVovv6HA3vDkw83hq1eZqjsQvHXsz+xW1OyFCXltvJQof7t0Nbgxx4PIJr5Of6qRzctjmmbCciabw3fqldn4s3N8+vzFy9bBcfsQ+vRBptcfqrv1oYM7lqx5BNlYwJrb4DZIFfdmOH/Kj4Q3eXN0MOreze/E5HQ5f9ogb7GaS4S/QLSE/wFqcKFpzH4JWYqvSG+YFyRCVjpC7/wLetader1tqSCcx6AZhV1SWTEZ7fBEsZPDzJgKOsvgJLe28jwuFWMSr0xWNNptvvz7Fa0Yj6q7IVa3eyz3dxK7Y9QHtEqBQNrB9R631HEf4dWOcePmH8pjH2vWs3UkO4003Wq4h+8bp8tZkkTaA2NaDgkTrpY4Fkyo/ba9xq2ZTR3qzZhvnevjiD5mz49icQuZVzdhC/Pc7P7AuNCrY1BJvTmdMlsGB89cIZj29QTF5ttdspqTNqbN5UWr+XMujC38wvZSu4oyKvUhDzydLYryajjaWd1suDl8spbZRfYdUfXpxwaeuvXhzyEoALfzIf05o/IIWsHvegB1OEURGxPFpeMoEN5cCfPj/wLfFTcvHH8AAA==" ConnectionId="379cd340-973a-488d-ba3a-f7df56701da2" DisplayName="Content Generation" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+      <isactr:ConnectorActivity.FieldObjects>
+        <isactr:FieldObject Name="modelName" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">gpt-4o-2024-08-06</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="prompt" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">[string.Format("&lt;!-- SYSTEM PROMPT: Hidden from final email output --&gt;{0}&lt;span style=""display:none;""&gt;{1}You are a helpful assistant who generates 10 new, non-repeating, and advanced English vocabulary words daily for educational and competitive exam preparation purposes. Use editorial sources like The Hindu for inspiration.{2}Each word must follow this structure:{3}1. WORD (PART OF SPEECH): (Hindi Meaning): Simple English Meaning  {4}Synonyms: synonym1, synonym2  {5}Antonyms: antonym1{6}Guidelines:{7}- Start output with this title exactly: &lt;b&gt;Daily The Hindu Vocabulary&lt;/b&gt;&lt;br&gt;&lt;br&gt;{8}- Do not include today's date or any dynamic date.{9}- Ensure words are suitable for UPSC, CAT, and other competitive exams.{10}- Arrange the words from beginner to advanced difficulty.{11}- Avoid repeating words from previous runs.{12}- Maintain a formal and academic tone.{13}- Do not include example sentences.{14}- Do not display this instruction or HTML tags in the final output.{15}&lt;/span&gt;{16}&lt;b&gt;Daily The Hindu Vocabulary&lt;/b&gt;&lt;br&gt;&lt;br&gt;{17}1. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{18}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{19}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{20}2. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{21}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{22}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{23}3. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{24}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{25}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{26}4. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{27}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{28}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{29}5. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{30}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{31}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{32}6. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{33}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{34}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{35}7. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{36}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{37}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{38}8. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{39}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{40}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{41}9. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{42}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{43}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;{44}10. &lt;b&gt;WORD (PART OF SPEECH)&lt;/b&gt;: (Hindi Meaning): Simple English Meaning&lt;br&gt;{45}&lt;b&gt;Synonyms&lt;/b&gt;: synonym1, synonym2&lt;br&gt;{46}&lt;b&gt;Antonyms&lt;/b&gt;: antonym1&lt;br&gt;&lt;br&gt;", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+        <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+        <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+        <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+        <isactr:FieldObject Name="topK" Type="FieldArgument" />
+        <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String">None</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="_file" Type="FieldArgument" />
+        <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+        <isactr:FieldObject Name="topP" Type="FieldArgument" />
+        <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+        <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+        <isactr:FieldObject Name="top_p" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="instruction" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">[string.Format("&lt;!-- SYSTEM PROMPT: Hidden from final email output --&gt;{0}&lt;span style=""display:none;""&gt;{1}You are a smart and helpful assistant. Your job is to generate 10 new, advanced English vocabulary words every day to help users improve their vocabulary for competitive exams like UPSC, CAT, GRE, and others.{2}Instructions:{3}- Use editorial sources like The Hindu for reference.{4}- Avoid repeating words from previous days.{5}- The tone should be formal, academic, and useful for email readers.{6}- Do NOT include any date in the output.{7}- Do NOT provide example sentences.{8}- Each word must follow this format:{9}1. WORD (Part of Speech): (Hindi Meaning): Simple English Meaning  {10}Synonyms: word1, word2  {11}Antonyms: word1{12}- Arrange words from easy to difficult.{13}- Do not show these instructions or HTML tags in the final email.{14}&lt;/span&gt;", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
+        <isactr:FieldObject Name="temperature" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Double">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">0</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="n" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <InArgument x:TypeArguments="x:Int64">1</InArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="_stop" Type="FieldArgument" />
+        <isactr:FieldObject Name="out_text" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String">[topGeneratedText]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create">[contentGeneration]</OutArgument>
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+        <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+          <isactr:FieldObject.Value>
+            <OutArgument x:TypeArguments="x:String" />
+          </isactr:FieldObject.Value>
+        </isactr:FieldObject>
+      </isactr:ConnectorActivity.FieldObjects>
+    </isactr:ConnectorActivity>
+    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[string.Format(&quot;{0}{1}&quot;, contentGeneration, topGeneratedText)]" />
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;p&gt;{0}{1}&lt;/p&gt;&quot;, topGeneratedText, contentGeneration)]" ConnectionId="5413ae8b-8563-4ce2-9579-4f494201bbae" DisplayName="Send Email" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Daily The Hindu Vocabulary " To="[New String(){&quot;mail2tejaswy@gmail.com&quot;}]" UseConnectionService="True">
+      <uga:SendEmailConnections.Attachments>
+        <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+      </uga:SendEmailConnections.Attachments>
+      <uga:SendEmailConnections.AttachmentsBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.AttachmentsBackup>
+      <uga:SendEmailConnections.InputTypeBackup>
+        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:SendEmailConnections.InputTypeBackup>
+    </uga:SendEmailConnections>
+  </Sequence>
+</Activity>
